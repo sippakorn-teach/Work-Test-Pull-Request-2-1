@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>โปรไฟล์ผู้ใช้งาน</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* พื้นหลังสีม่วงแบบเต็มหน้าจอ ไล่เฉดสีนุ่มนวลดูมีมิติ */
+        body {
+            background: linear-gradient(135deg, #2e1a47 0%, #4a2874 50%, #1a0f2e 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        /* เลย์เอาต์หลัก: จัดวางแบบอิสระ ไม่มีกรอบหรือกล่องสี่เหลี่ยมล้อมรอบ */
+        .profile-container {
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        /* รูปโปรไฟล์แบบลอยตัวและมีประกายแสงออร่าสีม่วง */
+        .profile-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid #b794f4;
+            margin: 0 auto 20px;
+            overflow: hidden;
+            box-shadow: 0 0 25px rgba(183, 148, 244, 0.4);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-avatar:hover {
+            transform: scale(1.05);
+        }
+
+        .profile-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* หัวข้อชื่อและตำแหน่ง */
+        .profile-name {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            color: #ffffff;
+            margin-bottom: 4px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .profile-role {
+            font-size: 0.95rem;
+            color: #d6bcfa; /* สีม่วงสว่างอ่อนๆ */
+            font-weight: 400;
+            margin-bottom: 40px;
+        }
+
+        /* ส่วนแสดงข้อมูล: จัดเรียงแบบเปิดโล่ง แยกเป็นบรรทัดชัดเจน */
+        .info-display {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            text-align: left;
+            margin-bottom: 40px;
+            padding: 0 10px;
+        }
+
+        .info-row {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .info-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #b794f4; /* สีม่วงเน้นหัวข้อ */
+            font-weight: 600;
+        }
+
+        .info-value {
+            font-size: 1.1rem;
+            color: #f7fafc;
+            font-weight: 400;
+        }
+
+        /* ส่วนของทักษะความสามารถ */
+        .skills-section {
+            text-align: left;
+            padding: 0 10px;
+        }
+
+        .skills-title {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #b794f4;
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            list-style: none;
+        }
+
+        /* ดีไซน์ป้ายทักษะแบบกลืนไปกับพื้นหลัง (Glassmorphism จางๆ) */
+        .skill-item a {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.06);
+            color: #e9d8fd;
+            border: 1px solid rgba(183, 148, 244, 0.25);
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-decoration: none;
+            backdrop-filter: blur(5px);
+            transition: all 0.25s ease;
+        }
+
+        /* เอฟเฟกต์เรืองแสงตอนชี้เม้าส์ */
+        .skill-item a:hover {
+            background: #b794f4;
+            color: #1a0f2e;
+            box-shadow: 0 0 15px rgba(183, 148, 244, 0.5);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ใช้ Semantic HTML5 แท็กหลักควบคุมเนื้อหาทั้งหมดบนหน้าเว็บ -->
+    <main class="profile-container">
+        
+        <!-- ส่วนหัวแสดงตัวตน -->
+        <header>
+            <div class="profile-avatar">
+                <!-- เปลี่ยนที่อยู่รูปภาพของคุณได้ที่นี่ -->
+                <img src="https://www.lemon8-app.com/seo/image?item_id=7479640262864749074&index=1&sign=348f05873ef9c956d650e220c7667e35" alt="jetnipat003">
+            </div>
+            <h1 class="profile-name">Jetnipat Petpua</h1>
+            <p class="profile-role">นักเรียนวิทยาลัยเทคนิคกระบี่</p>
+        </header>
+
+        <!-- ส่วนของรายละเอียดข้อมูลส่วนตัว แบบไร้กรอบบีบรัด -->
+        <div class="info-display">
+            <div class="info-row">
+                <span class="info-label">รหัสนักศึกษา</span>
+                <span class="info-value">68219010003</span>
+            </div>
+            
+            <div class="info-group info-row">
+                <span class="info-label">อีเมล</span>
+                <span class="info-value">jetnipat.phph@gmail.com</span>
+            </div>
+
+            <div class="info-group info-row">
+                <span class="info-label">แผนก / สาขา</span>
+                <span class="info-value">เทคโนโลยีสารสนเทศ</span>
+            </div>
+        </div>
+
+        <!-- ส่วนแสดงทักษะความสามารถด้านล่าง -->
+        <section class="skills-section">
+            <h2 class="skills-title">ทักษะความสามารถ</h2>
+            <ul class="skills-list">
+                <li class="skill-item"><a href="#">HTML5 / CSS3</a></li>
+                <li class="skill-item"><a href="#">JavaScript</a></li>
+                <li class="skill-item"><a href="#">Git & GitHub</a></li>
+            </ul>
+        </section>
+
+    </main>
+
+</body>
+</html>
