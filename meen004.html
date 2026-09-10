@@ -1,0 +1,266 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sara 090 - Cyber Portfolio</title>
+    <!-- นำเข้าฟอนต์ Orbitron สำหรับความไซไฟ และ Prompt สำหรับภาษาไทย -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Orbitron:wght@500;700&family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- นำเข้า Font Awesome สำหรับไอคอนสุดเท่ -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Prompt', sans-serif;
+        }
+
+        body {
+            /* พื้นหลังสีเข้มแบบอวกาศ พร้อมเอฟเฟกต์ตาราง Grid ดิจิทัล */
+            background-color: #0a0a12;
+            background-image: 
+                linear-gradient(rgba(0, 242, 254, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 242, 254, 0.03) 1px, transparent 1px);
+            background-size: 20px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        /* การ์ดสไตล์ไซเบอร์ มีเส้นขอบเรืองแสงไล่เฉดสี */
+        .cyber-card {
+            background: rgba(16, 16, 28, 0.85);
+            border-radius: 16px;
+            width: 100%;
+            max-width: 450px;
+            padding: 30px;
+            position: relative;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(0, 242, 254, 0.2);
+            backdrop-filter: blur(10px);
+            overflow: hidden;
+        }
+
+        /* เส้นแสงนีออนวิ่งรอบการ์ดเวลาจ้องมอง */
+        .cyber-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #00f2fe, #4facfe, #00f2fe);
+            background-size: 200% auto;
+            animation: glower 3s linear infinite;
+        }
+
+        @keyframes glower {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 200% 50%; }
+        }
+
+        /* โปรไฟล์ด้านบน */
+        .cyber-profile {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* กรอบรูปทรงหกเหลี่ยมหรือวงกลมแบบมีเป้าเล็งสแกน (Scanner Effect) */
+        .avatar-wrapper {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 15px;
+        }
+
+        .avatar-scan {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 2px dashed #00f2fe;
+            padding: 5px;
+            animation: rotateScan 15s linear infinite;
+        }
+
+        @keyframes rotateScan {
+            100% { transform: rotate(360deg); }
+        }
+
+        .avatar-wrapper img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            object-fit: cover;
+            border: 2px solid #4facfe;
+        }
+
+        .cyber-profile h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: #ffffff;
+            font-size: 26px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+            text-shadow: 0 0 10px rgba(0, 242, 254, 0.6);
+        }
+
+        .cyber-profile p {
+            color: #00f2fe;
+            font-size: 13px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        /* รายละเอียดข้อมูลสไตล์ Terminal */
+        .data-box {
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+
+        .data-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .data-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .data-icon {
+            color: #4facfe;
+            font-size: 18px;
+            margin-right: 15px;
+            text-shadow: 0 0 8px rgba(79, 172, 254, 0.5);
+        }
+
+        .data-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .data-label {
+            font-size: 11px;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .data-value {
+            font-size: 14px;
+            color: #e2e8f0;
+            font-weight: 500;
+        }
+
+        /* แท็กสกิลแบบปุ่มกดระบบ Sci-Fi */
+        .skills-title {
+            font-size: 13px;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .skills-grid {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .cyber-tag {
+            background: rgba(0, 242, 254, 0.05);
+            color: #00f2fe;
+            border: 1px solid rgba(0, 242, 254, 0.3);
+            padding: 6px 14px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-family: 'Orbitron', 'Prompt', sans-serif;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .cyber-tag:hover {
+            background: #00f2fe;
+            color: #0a0a12;
+            box-shadow: 0 0 15px rgba(0, 242, 254, 0.6);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cyber-card">
+        <!-- ส่วนรูปภาพแบบวงแหวนสแกนข้อมูล -->
+        <div class="cyber-profile">
+            <div class="avatar-wrapper">
+                <div class="avatar-scan"></div>
+                <!-- เปลี่ยนรูปโปรไฟล์จริงของคุณที่นี่ -->
+                <img src="img/anime1.jpg" alt="">
+
+            </div>
+            <h2>Thapanawat Kyankran</h2>
+            <p><i class="fa-solid fa-code-branch"></i> ครูพิเศษสอนวิทยาลัยเทคนิคกระบี่</p>
+        </div>
+
+        <!-- กล่องข้อมูลสไตล์ฐานข้อมูลระบบคลาวด์ -->
+        <div class="data-box">
+            <div class="data-item">
+                <div class="data-icon"><i class="fa-solid fa-terminal"></i></div>
+                <div class="data-info">
+                    <span class="data-label">STUDENT_ID</span>
+                    <span class="data-value" style="font-family: 'Orbitron'; color: #00f2fe;">68219010004</span>
+                </div>
+            </div>
+
+            <div class="data-item">
+                <div class="data-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                <div class="data-info">
+                    <span class="data-label">SECURE_EMAIL</span>
+                    <span class="data-value">thapanawat08@gmail.com</span>
+                </div>
+            </div>
+
+            <div class="data-item">
+                <div class="data-icon"><i class="fa-solid fa-network-wired"></i></div>
+                <div class="data-info">
+                    <span class="data-label">DEPARTMENT</span>
+                    <span class="data-value">เทคโนโลยีสารสนเทศ (IT)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ส่วนของ Skill แฟลชไดรฟ์ความสามารถ -->
+        <div>
+            <h3 class="skills-title"><i class="fa-solid fa-bolt" style="color: #00f2fe;"></i> CORE_ABILITIES</h3>
+            <div class="skills-grid">
+                <span class="cyber-tag">HTML5 / CSS3</span>
+                <span class="cyber-tag">JavaScript</span>
+                <span class="cyber-tag">Git & GitHub</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
