@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>โปรไฟล์</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal-1:#0e363d;
+    --teal-2:#1f7a63;
+    --ink:#1c211e;
+    --muted:#788077;
+    --line:#e4e6de;
+    --tag-border:#1f7a63;
+    --tag-text:#1f7a63;
+    --page-bg:#f4f3ee;
+  }
+
+  *{box-sizing:border-box;}
+
+  body{
+    margin:0;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:48px 20px;
+    background:var(--page-bg);
+    font-family:"IBM Plex Sans Thai","Noto Sans Thai",sans-serif;
+    color:var(--ink);
+  }
+
+  .card{
+    width:100%;
+    max-width:420px;
+    background:#fff;
+    border-radius:6px;
+    overflow:hidden;
+    box-shadow:0 18px 40px rgba(20,30,25,0.14);
+    border:1px solid var(--line);
+  }
+
+  .card-header{
+    background:linear-gradient(160deg, var(--teal-1), var(--teal-2));
+    padding:32px 28px 46px;
+    display:flex;
+    align-items:center;
+    gap:16px;
+  }
+
+  .avatar{
+    width:72px;
+    height:72px;
+    border-radius:10px;
+    flex:0 0 auto;
+    overflow:hidden;
+    background:#fff;
+    border:2px solid rgba(255,255,255,0.7);
+  }
+
+  .avatar img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+
+  .name{
+    font-family:"Fraunces","IBM Plex Sans Thai",serif;
+    color:#fff;
+    font-size:21px;
+    font-weight:600;
+    margin:0;
+    line-height:1.25;
+  }
+
+  .role{
+    color:#bfe0d3;
+    font-size:13px;
+    font-weight:400;
+    margin:5px 0 0;
+  }
+
+  .card-body{
+    padding:0 28px 26px;
+    margin-top:-22px;
+  }
+
+  .info-panel{
+    background:#fff;
+    border-radius:6px;
+    box-shadow:0 6px 18px rgba(20,30,25,0.08);
+    padding:6px 18px;
+  }
+
+  .info-row{
+    display:grid;
+    grid-template-columns:110px 1fr;
+    gap:12px;
+    padding:12px 0;
+    border-bottom:1px solid var(--line);
+    font-size:13.5px;
+  }
+
+  .info-row:last-of-type{border-bottom:none;}
+
+  .info-label{color:var(--muted);}
+  .info-value{color:var(--ink); font-weight:500;}
+
+  .skills-block{padding-top:20px;}
+
+  .skills-label{
+    color:var(--muted);
+    font-size:13px;
+    margin-bottom:10px;
+    letter-spacing:0.01em;
+  }
+
+  .tag-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+
+  .tag{
+    background:#fff;
+    color:var(--tag-text);
+    border:1px solid var(--tag-border);
+    font-size:12px;
+    font-weight:500;
+    padding:5px 12px;
+    border-radius:4px;
+  }
+
+</style>
+</head>
+<body background-color: #f4f3ee;
+background-image:
+  radial-gradient(560px 420px at 10% 8%, rgba(31,122,99,0.16), transparent 60%),
+  radial-gradient(640px 480px at 92% 88%, rgba(14,61,58,0.14), transparent 60%),
+  radial-gradient(900px 700px at 50% 50%, rgba(31,122,99,0.05), transparent 70%);
+background-attachment: fixed;>
+   
+
+  <div class="card">
+    <div class="card-header">
+      <div class="avatar">
+        <!-- แทนที่ photo.jpg ด้วยชื่อไฟล์รูปของคุณ วางไฟล์รูปไว้โฟลเดอร์เดียวกับ html นี้ -->
+        <img src="https://s.imgz.io/2026/09/10/images00af037e896c5cb5.jpeg" alt="รูปโปรไฟล์">
+      </div>
+      <div>
+        <p class="name">นาย ระพีพัฒน์ ตันเชื้อ</p>
+        <p class="role">นักเรียนนักศึกษา / กำลังศึกษาอยู่ที่วิทยาลัยเทคนิคกระบี่ </p>
+      </div>
+    </div>
+
+    <div class="card-body">
+      <div class="info-panel">
+        <div class="info-row">
+          <span class="info-label">รหัสนักศึกษา</span>
+          <span class="info-value">68219010012</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">อีเมล</span>
+          <span class="info-value">68219010012@kbtc.ac.th</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">แผนก / สาขา</span>
+          <span class="info-value">เทคโนโลยีสารสนเทศ</span>
+        </div>
+      </div>
+
+      <div class="skills-block">
+        <div class="skills-label">ทักษะความสามารถ</div>
+        <div class="tag-list">
+          <span class="tag">HTML5 / CSS3</span>
+          <span class="tag">Git & GitHub</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
