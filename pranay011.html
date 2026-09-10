@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>พระนายณ์ ไชยคชบาล</title>
+</head>
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, "Tahoma", sans-serif;
+
+            /* พื้นหลังธีมดวงจันทร์ */
+            background:
+                radial-gradient(circle at 20% 20%, #334155 0, transparent 25%),
+                radial-gradient(circle at 80% 80%, #1e3a5f 0, transparent 30%),
+                #080d18;
+
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 20px;
+            color: #e2e8f0;
+        }
+
+        /* กล่องหลัก */
+        .profile-card {
+            width: 100%;
+            max-width: 440px;
+
+            background: #111827;
+
+            border-radius: 12px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 15px 40px rgba(0, 0, 0, 0.55),
+                0 0 25px rgba(96, 165, 250, 0.08);
+        }
+
+        /* ส่วนหัว */
+        .profile-header {
+            background:
+                linear-gradient(
+                    135deg,
+                    #0f172a,
+                    #1e293b,
+                    #334155
+                );
+
+            text-align: center;
+
+            padding: 28px 20px 24px;
+
+            border-bottom: 1px solid #475569;
+        }
+
+        /* รูปโปรไฟล์ */
+        .profile-image {
+            width: 82px;
+            height: 82px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            border: 3px solid #e2e8f0;
+
+            box-shadow:
+                0 0 15px rgba(226, 232, 240, 0.25);
+
+            margin-bottom: 12px;
+        }
+
+        /* ชื่อ */
+        .profile-name {
+            color: #f8fafc;
+
+            font-size: 21px;
+
+            font-weight: bold;
+
+            margin-bottom: 6px;
+        }
+
+        /* ตำแหน่ง / สาขา */
+        .profile-role {
+            color: #cbd5e1;
+
+            font-size: 13px;
+        }
+
+        /* ส่วนข้อมูล */
+        .profile-body {
+            padding: 20px;
+        }
+
+        /* แต่ละแถว */
+        .info-row {
+            display: flex;
+
+            justify-content: space-between;
+            align-items: center;
+
+            gap: 15px;
+
+            padding: 13px 0;
+
+            border-bottom: 1px solid #263244;
+
+            font-size: 14px;
+        }
+
+        .info-row:last-child {
+            border-bottom: none;
+        }
+
+        /* หัวข้อ */
+        .info-label {
+            color: #94a3b8;
+
+            font-weight: bold;
+
+            white-space: nowrap;
+        }
+
+        /* ค่า */
+        .info-value {
+            color: #e2e8f0;
+
+            text-align: right;
+
+            word-break: break-word;
+        }
+
+        /* ส่วนทักษะ */
+        .skills {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
+
+            margin-top: 4px;
+        }
+
+        /* ป้ายทักษะ */
+        .skill {
+            background: #1e293b;
+
+            color: #7dd3fc;
+
+            border: 1px solid #334155;
+
+            padding: 5px 11px;
+
+            border-radius: 20px;
+
+            font-size: 12px;
+
+            transition: 0.2s;
+        }
+
+        .skill:hover {
+            background: #334155;
+
+            color: #bae6fd;
+
+            transform: translateY(-2px);
+        }
+
+        /* มือถือ */
+        @media (max-width: 480px) {
+
+            body {
+                padding: 12px;
+            }
+
+            .profile-card {
+                max-width: 100%;
+            }
+
+            .info-row {
+                flex-direction: column;
+
+                align-items: flex-start;
+            }
+
+            .info-value {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-card">
+
+        <!-- ส่วนหัว -->
+        <div class="profile-header">
+
+            <!-- เปลี่ยนรูปตรงนี้ -->
+            <img
+                src="https://s.imgz.io/2026/09/10/fenrilf3853f5cad7e588c.png"
+                alt="รูปโปรไฟล์"
+                class="profile-image"
+            >
+
+            <!-- เปลี่ยนชื่อ -->
+            <h1 class="profile-name">
+                ชื่อ พระนายณ์  ไชยคชบาล
+            </h1>
+
+            <!-- เปลี่ยนข้อความ -->
+            <p class="profile-role">
+                นักศึกษา สาขาเทคโนโลยีสารสนเทศ
+            </p>
+
+        </div>
+
+
+        <!-- ข้อมูล -->
+        <div class="profile-body">
+
+            <div class="info-row">
+
+                <span class="info-label">
+                    รหัสนักศึกษา:
+                </span>
+
+                <span class="info-value">
+                    68219010011
+                </span>
+
+            </div>
+
+
+            <div class="info-row">
+
+                <span class="info-label">
+                    อีเมล:
+                </span>
+
+                <span class="info-value">
+                    easypoogr13@gmail.com
+                </span>
+
+            </div>
+
+
+            <div class="info-row">
+
+                <span class="info-label">
+                    แผนก 
+                </span>
+
+                <span class="info-value">
+                    เทคโนโลยีสารสนเทศ
+                </span>
+
+            </div>
+
+
+            <div class="info-row">
+
+                <span class="info-label">
+                    ทักษะความสามารถ:
+                </span>
+
+                <div class="skills">
+
+                    <span class="skill">
+                        HTML5 / CSS3
+                    </span>
+
+                    <span class="skill">
+                        JavaScript
+                    </span>
+
+                    <span class="skill">
+                        Git & GitHub
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html>
