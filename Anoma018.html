@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anoma_a - Profile Card</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Kanit', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #fff0f3 0%, #fbc4ab 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .profile-card {
+            background: #ffffff;
+            width: 100%;
+            max-width: 400px;
+            border-radius: 30px;
+            box-shadow: 0 12px 35px rgba(255, 182, 193, 0.4);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(255, 143, 162, 0.5);
+        }
+
+        .card-header {
+            background: linear-gradient(135deg, #ff8fa3 0%, #ff4d6d 100%);
+            padding: 40px 20px 30px;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .card-header::after {
+            content: "🎀";
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 1.5rem;
+            opacity: 0.8;
+        }
+
+        .avatar-container {
+            width: 105px;
+            height: 105px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            border: 4px solid #ffffff;
+            overflow: hidden;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            background: #fff5f5;
+        }
+
+        .avatar-container img {
+            width: 100%;
+            height: 100%;
+            /* ตกแต่งให้รูปตัดเป็นทรงกลมพอดีและไม่เบี้ยว */
+            object-fit: cover; 
+            object-position: center;
+        }
+
+        .profile-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .profile-subtitle {
+            font-size: 0.85rem;
+            background: rgba(255, 255, 255, 0.25);
+            padding: 3px 12px;
+            border-radius: 20px;
+            display: inline-block;
+            font-weight: 400;
+        }
+
+        .card-body {
+            padding: 30px 25px;
+        }
+
+        .info-group {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 0;
+            border-bottom: 2px dashed #ffe5ec;
+        }
+
+        .info-group:last-of-type {
+            border-bottom: none;
+            margin-bottom: 10px;
+        }
+
+        .info-label {
+            font-size: 0.95rem;
+            color: #ff7096;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .info-label .emoji-icon {
+            font-size: 1.1rem;
+        }
+
+        .info-value {
+            font-size: 0.95rem;
+            color: #4a4a4a;
+            font-weight: 500;
+            text-align: right;
+        }
+
+        .skills-section {
+            margin-top: 25px;
+            background: #fff0f3;
+            padding: 15px;
+            border-radius: 20px;
+        }
+
+        .skills-title {
+            font-size: 0.95rem;
+            color: #ff4d6d;
+            margin-bottom: 12px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-tag {
+            font-size: 0.8rem;
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-weight: 500;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            transition: all 0.2s ease;
+        }
+
+        .skill-tag.html-css { background-color: #ffccd5; color: #ff4d6d; }
+        .skill-tag.js { background-color: #fff0f3; color: #ff7096; border: 1px solid #ffccd5; }
+        .skill-tag.git { background-color: #ffe5ec; color: #ff8fa3; }
+
+        .skill-tag:hover {
+            transform: scale(1.08) rotate(-2deg);
+            background-color: #ff4d6d;
+            color: white;
+        }
+    </style>
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+<body>
+
+    <div class="profile-card">
+        <!-- ส่วนหัว: รูปโปรไฟล์และชื่อ -->
+        <div class="card-header">
+            <div class="avatar-container">
+                <!-- 
+                  💡 วิธีใส่รูปภาพของคุณ:
+                  1. ถ้าใช้รูปในคอมพิวเตอร์: ให้เปลี่ยน src="https://..." เป็น src="ชื่อไฟล์รูปของคุณ.jpg" (เช่น profile.jpg)
+                  2. ถ้าใช้รูปจากเน็ต: นำลิงก์รูปภาพมาวางแทนที่ในเครื่องหมายคำพูดได้เลยครับ
+                -->
+                <img src="16383.jpg" alt="รูปโปรไฟล์ของ Anoma_a">
+            </div>
+            <h2 class="profile-name">Anoma_a</h2>
+            <p class="profile-subtitle">🌸 นักศึกษา KBTC</p>
+        </div>
+
+        <!-- ส่วนข้อมูลส่วนตัว -->
+        <div class="card-body">
+            <div class="info-group">
+                <span class="info-label"><span class="emoji-icon">🪪</span> รหัสนักศึกษา</span>
+                <span class="info-value">68219010018</span>
+            </div>
+            
+            <div class="info-group">
+                <span class="info-label"><span class="emoji-icon">💌</span> อีเมล</span>
+                <span class="info-value">68219010018@kbtc.ac.th</span>
+            </div>
+            
+            <div class="info-group">
+                <span class="info-label"><span class="emoji-icon">🔮</span> แผนก / สาขา</span>
+                <span class="info-value">เทคโนโลยีสารสนเทศ</span>
+            </div>
+
+            <!-- ส่วนทักษะความสามารถ -->
+            <div class="skills-section">
+                <p class="skills-title"><span class="emoji-icon">💫</span> ทักษะและความสามารถ</p>
+                <div class="skills-container">
+                    <span class="skill-tag html-css">💝 HTML / CSS</span>
+                    <span class="skill-tag js">⚡ JavaScript</span>
+                    <span class="skill-tag git">🐱 Git & GitHub</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
