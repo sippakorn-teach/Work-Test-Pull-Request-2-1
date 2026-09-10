@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แนะนำตัวเอง</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f172a, #1e293b, #3b82f6);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 24px;
+            padding: 30px;
+            max-width: 700px;
+            width: 100%;
+            color: #fff;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: center;
+        }
+
+        /* ฝั่งซ้าย: รูป + ชื่อ */
+        .left-panel {
+            flex: 1;
+            min-width: 220px;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #38bdf8;
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
+            margin-bottom: 15px;
+        }
+
+        .name {
+            font-size: 22px;
+            font-weight: 700;
+            color: #f8fafc;
+        }
+
+        .school {
+            font-size: 14px;
+            color: #94a3b8;
+            margin-top: 5px;
+        }
+
+        /* ฝั่งขวา: รายละเอียด */
+        .right-panel {
+            flex: 1.5;
+            min-width: 250px;
+        }
+
+        .info-group {
+            margin-bottom: 15px;
+        }
+
+        .info-title {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #38bdf8;
+            margin-bottom: 4px;
+            font-weight: 600;
+        }
+
+        .info-value {
+            font-size: 15px;
+            color: #e2e8f0;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 8px 12px;
+            border-radius: 8px;
+            border-left: 3px solid #38bdf8;
+        }
+
+        /* แท็กความสามารถ/งานอดิเรก */
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 5px;
+        }
+
+        .tag {
+            background: rgba(56, 189, 248, 0.2);
+            color: #7dd3fc;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <!-- ฝั่งซ้าย -->
+        <div class="left-panel">
+            <img src="img/14.jpg" alt="รูปโปรไฟล์" class="profile-img">
+            <div class="name">จารุวิทย์ สมบูรณ์</div>
+            <div class="school">🏫 ชื่อโรงเรียน / วิทยาลัย</div>
+        </div>
+
+        <!-- ฝั่งขวา -->
+        <div class="right-panel">
+            <div class="info-group">
+                <div class="info-title">👤 ข้อมูลส่วนตัว</div>
+                <div class="info-value">อายุ 17 ปี | ชั้นปี ปวช.2/1 | แผนก เทคโนโลยีสารสรเทศ</div>
+            </div>
+
+            <div class="info-group">
+                <div class="info-title">⚡ ความสามารถพิเศษ</div>
+                <div class="tags">
+                    <span class="tag">เขียนโค้ด HTML/CSS</span>
+                    <span class="tag">นอน</span>
+                    <span class="tag">วาดรูป</span>
+                </div>
+            </div>
+
+            <div class="info-group">
+                <div class="info-title">🍕 อาหารที่ชอบ</div>
+                <div class="info-value">ชาบู, ชาเย็น, กะเพราไข่ดาว</div>
+            </div>
+
+            <div class="info-group">
+                <div class="info-title">⚽ กีฬาที่ชอบ</div>
+                <div class="info-value">ฟุตบอล,  E-Sports</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
