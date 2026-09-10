@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แนะนำตัว</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #fdf3f7;
+        }
+
+        /* การ์ดสำหรับหน้าจอคอม */
+        .card {
+            width: 650px;
+            padding: 35px;
+            text-align: center;
+            background: #ffffff;
+            border-radius: 25px;
+            border: 2px solid #f0c8d9;
+            box-shadow: 0 10px 25px rgba(180, 160, 190, 0.15);
+        }
+
+        .profile {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #f0c8d9;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            color: #b57ba8;
+            font-size: 28px;
+            margin-bottom: 6px;
+        }
+
+        .subtitle {
+            color: #aaa0ad;
+            font-size: 15px;
+            margin-bottom: 22px;
+        }
+
+        /* ข้อมูลแนะนำตัว */
+        .info {
+            background: #fbf1f8;
+            border-radius: 18px;
+            padding: 18px 25px;
+            text-align: left;
+        }
+
+        .info p {
+            color: #666;
+            font-size: 15px;
+            margin: 9px 0;
+        }
+
+        .info span {
+            color: #b57ba8;
+            font-weight: bold;
+        }
+
+        /* งานอดิเรก */
+        .hobby {
+            margin-top: 20px;
+        }
+
+        .hobby h2 {
+            color: #8bb8b0;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #e5f3ef;
+            color: #679b91;
+            padding: 7px 14px;
+            margin: 4px;
+            border-radius: 18px;
+            font-size: 14px;
+        }
+
+        /* ปุ่ม */
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            background: #f3c9d9;
+            color: #79566a;
+            text-decoration: none;
+            border-radius: 22px;
+            font-size: 14px;
+        }
+
+        .button:hover {
+            background: #eeb7cd;
+        }
+
+        .footer {
+            margin-top: 18px;
+            color: #bbb;
+            font-size: 12px;
+        }
+
+        /* ปรับให้ยังดูดีถ้าเปิดบนจอเล็ก */
+        @media (max-width: 700px) {
+            .card {
+                width: 90%;
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+
+        <!-- ใส่รูปของตัวเอง -->
+        <img src="projuce/k1.png" alt="" class="profile">
+
+        <h1>Alicha  Jaiwang </h1>
+
+        <p class="subtitle">
+            Hanna
+        </p>
+
+        <div class="info">
+            <p>👤 <span>ชื่อ :</span> อลิชา ใจหวัง</p>
+            <p>🎂 <span>อายุ :</span> 17 ปี</p>
+            <p>🏫 <span>โรงเรียน :</span> วิทยาลัยเทคนิคกระบี่</p>
+            <p>💻 <span>สาขา :</span> เทคโนโลยีสารสนเทศ</p>
+            <p>📍 <span>จังหวัด :</span> กระบี่</p>
+        </div>
+
+        <div class="hobby">
+            <h2>งานอดิเรก 🌱</h2>
+
+            <span class="tag">🎧 ฟังเพลง</span>
+            <span class="tag">🎮 เล่นเกม</span>
+            <span class="tag">📷 ถ่ายรูป</span>
+        </div>
+
+        <a href="#" class="button">
+            ติดต่อฉัน 💌
+        </a>
+
+        <p class="footer">
+            Made with ♡
+        </p>
+
+    </div>
+
+</body>
+</html>
